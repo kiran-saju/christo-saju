@@ -1,654 +1,318 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="theme-color" content="#f4f5fb"/>
-<meta name="description" content="Christo Saju — IT Support Engineer. Incident management within SLA, SQL & PL/SQL data maintenance, remote support and Active Directory administration."/>
-<title>Christo Saju — IT Support Engineer</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f5fb">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Search engine optimization -->
+    <title>Christo Saju | IT Support Engineer | SQL &amp; PL/SQL</title>
+    <meta name="description" content="Christo Saju is an IT Support Engineer experienced in incident management, SLA compliance, SQL, PL/SQL, remote troubleshooting and Active Directory.">
+    <meta name="author" content="Christo Saju">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://christosaju.pages.dev/">
 
-<style>
-:root{
-  --bg:#f4f5fb;
-  --bg-2:#eceefa;
-  --ink:#0e1424;
-  --ink-2:#161d33;
-  --muted:#586079;
-  --line:rgba(14,20,36,.10);
-  --glass:rgba(255,255,255,.62);
-  --glass-line:rgba(255,255,255,.85);
+    <!-- Social sharing metadata -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Christo Saju">
+    <meta property="og:title" content="Christo Saju | IT Support Engineer">
+    <meta property="og:description" content="Christo Saju is an IT Support Engineer experienced in incident management, SLA compliance, SQL, PL/SQL, remote troubleshooting and Active Directory.">
+    <meta property="og:url" content="https://christosaju.pages.dev/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Christo Saju | IT Support Engineer">
+    <meta name="twitter:description" content="Christo Saju is an IT Support Engineer experienced in incident management, SLA compliance, SQL, PL/SQL, remote troubleshooting and Active Directory.">
 
-  --blue:#3f5cf2;
-  --violet:#7a5cff;
-  --amber:#ff9a3c;
-  --mint:#1fc89b;
+    <!-- Fonts and styles -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 
-  --on-dark:#e9ecf8;
-  --on-dark-muted:#98a1bd;
-
-  --f-display:'Sora',sans-serif;
-  --f-body:'Manrope',sans-serif;
-  --f-mono:'JetBrains Mono',monospace;
-  --maxw:1240px;
-  --radius:24px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{
-  font-family:var(--f-body);
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
-::selection{background:var(--blue);color:#fff}
-:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
-.wrap{width:min(calc(100% - 48px),var(--maxw));margin:0 auto}
-
-.eyebrow{
-  font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--blue);display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;font-weight:500;
-}
-.eyebrow i{width:22px;height:1.5px;background:currentColor;display:block}
-h1,h2,h3{font-family:var(--f-display);letter-spacing:-.03em;line-height:1.08}
-h2.title{font-size:clamp(32px,4.2vw,56px);font-weight:700;max-width:16ch}
-.sub{color:var(--muted);max-width:52ch;font-size:17px}
-
-/* ---------- NAV ---------- */
-.nav{position:fixed;inset:16px 0 auto 0;z-index:50;pointer-events:none}
-.nav-in{
-  pointer-events:auto;width:min(calc(100% - 32px),var(--maxw));margin:0 auto;
-  display:flex;align-items:center;justify-content:space-between;gap:16px;
-  padding:10px 12px 10px 16px;border-radius:18px;
-  background:var(--glass);border:1px solid var(--glass-line);
-  backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);
-  box-shadow:0 10px 40px rgba(40,50,110,.10);
-  transition:box-shadow .3s;
-}
-.nav.scrolled .nav-in{box-shadow:0 14px 50px rgba(40,50,110,.18)}
-.brand{display:flex;align-items:center;gap:12px}
-.mark{
-  width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
-  background:linear-gradient(135deg,var(--blue),var(--violet));color:#fff;
-  font-family:var(--f-mono);font-weight:700;font-size:14px;letter-spacing:-.04em;
-  box-shadow:0 6px 18px rgba(63,92,242,.35);
-}
-.brand b{font-family:var(--f-display);font-size:15px;font-weight:700;display:block;line-height:1.15}
-.brand small{font-family:var(--f-mono);font-size:10px;color:var(--muted);letter-spacing:.08em}
-.links{display:flex;gap:6px;list-style:none}
-.links a{font-size:14px;font-weight:600;color:var(--muted);padding:8px 14px;border-radius:10px;transition:.2s}
-.links a:hover,.links a.on{color:var(--ink);background:rgba(63,92,242,.09)}
-.btn{
-  display:inline-flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:600;font-size:14px;
-  padding:13px 22px;border-radius:12px;transition:transform .25s cubic-bezier(.2,.9,.3,1.3),box-shadow .25s, background .2s;
-}
-.btn-dark{background:var(--ink);color:#fff;box-shadow:0 10px 26px rgba(14,20,36,.25)}
-.btn-dark:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(14,20,36,.32)}
-.btn-glass{background:var(--glass);border:1px solid var(--glass-line);box-shadow:0 6px 20px rgba(40,50,110,.08)}
-.btn-glass:hover{transform:translateY(-2px);background:#fff}
-.btn-blue{background:var(--blue);color:#fff;box-shadow:0 10px 26px rgba(63,92,242,.35)}
-.btn-blue:hover{transform:translateY(-2px);background:#5470ff}
-.btn svg{width:15px;height:15px}
-.burger{display:none;width:42px;height:42px;border-radius:12px;background:rgba(63,92,242,.09);place-items:center}
-.burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;position:relative}
-.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:.25s}
-.burger span::before{top:-6px}.burger span::after{top:6px}
-.nav.open .burger span{background:transparent}
-.nav.open .burger span::before{top:0;transform:rotate(45deg)}
-.nav.open .burger span::after{top:0;transform:rotate(-45deg)}
-
-/* ---------- HERO ---------- */
-.hero{position:relative;padding:150px 0 90px;overflow:hidden}
-.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;z-index:0;pointer-events:none}
-.b1{width:520px;height:520px;background:#b9c4ff;top:-120px;right:-80px}
-.b2{width:420px;height:420px;background:#d9c9ff;bottom:-120px;left:-100px}
-.b3{width:260px;height:260px;background:#ffd9b0;top:40%;left:42%;opacity:.4}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.status{
-  display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 12px;border-radius:99px;
-  background:var(--glass);border:1px solid var(--glass-line);font-size:13px;font-weight:600;margin-bottom:26px;
-}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--mint);position:relative}
-.dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1.5px solid var(--mint);animation:ping 2s infinite}
-@keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.8);opacity:0}}
-.hero h1{font-size:clamp(42px,5.6vw,80px);font-weight:800;margin-bottom:24px}
-.grad{background:linear-gradient(120deg,var(--blue),var(--violet) 60%,#b05cff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.lead{font-size:clamp(17px,1.4vw,20px);color:var(--muted);max-width:54ch;margin-bottom:34px}
-.hero p.lead strong{color:var(--ink)}
-.cta{display:flex;flex-wrap:wrap;gap:14px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px}
-.chip{font-family:var(--f-mono);font-size:12px;padding:7px 12px;border-radius:9px;background:rgba(255,255,255,.7);border:1px solid var(--line);color:var(--ink-2)}
-
-/* hero visual: ticket + console */
-.stack{position:relative;min-height:470px}
-.glass{
-  background:var(--glass);border:1px solid var(--glass-line);border-radius:22px;
-  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-  box-shadow:0 24px 60px rgba(40,50,110,.16);
-}
-.ticket{position:absolute;top:0;left:0;right:6%;padding:22px 24px}
-.t-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-.t-id{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
-.badge{font-family:var(--f-mono);font-size:11px;font-weight:700;padding:5px 10px;border-radius:99px;letter-spacing:.04em}
-.badge.amber{background:#fff0dc;color:#b86100}
-.badge.mint{background:#d9f7ee;color:#0b7a5c}
-.ticket h4{font-family:var(--f-display);font-size:17px;font-weight:600;margin-bottom:4px;letter-spacing:-.01em}
-.ticket p{font-size:13.5px;color:var(--muted)}
-.sla{margin-top:18px}
-.sla-top{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11px;color:var(--muted);margin-bottom:8px}
-.bar{height:7px;border-radius:9px;background:rgba(14,20,36,.08);overflow:hidden}
-.bar i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--blue),var(--violet));animation:fill 2.4s .6s forwards cubic-bezier(.3,.8,.2,1)}
-@keyframes fill{to{width:72%}}
-.console{
-  position:absolute;bottom:0;right:0;left:12%;border-radius:20px;overflow:hidden;
-  background:#0f1528;color:var(--on-dark);box-shadow:0 30px 70px rgba(14,20,36,.45);
-  border:1px solid rgba(255,255,255,.08);
-}
-.c-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;background:#151c35;border-bottom:1px solid rgba(255,255,255,.06)}
-.c-bar i{width:10px;height:10px;border-radius:50%;background:#2c355a}
-.c-bar span{margin-left:8px;font-family:var(--f-mono);font-size:11px;color:var(--on-dark-muted)}
-.c-body{padding:18px 20px;font-family:var(--f-mono);font-size:12.5px;line-height:1.85;min-height:168px;white-space:pre-wrap}
-.k{color:#8fa4ff}.s{color:#7de3c2}.c{color:#6a7499}.n{color:#ffb86b}.f{color:#d0a8ff}
-.caret{display:inline-block;width:7px;height:14px;background:var(--amber);vertical-align:-2px;animation:blink 1s steps(2) infinite}
-@keyframes blink{50%{opacity:0}}
-.p-id{display:flex;gap:14px;align-items:center;margin:4px 0 18px}
-.p-id h4{margin:0}
-.p-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.p-stats div{padding:11px 12px;border-radius:12px;background:rgba(255,255,255,.75);border:1px solid var(--line)}
-.p-stats b{display:block;font-family:var(--f-display);font-size:16px;font-weight:700;letter-spacing:-.02em}
-.p-stats span{font-family:var(--f-mono);font-size:10px;color:var(--muted);letter-spacing:.04em}
-.res{color:#ffd29a}
-.float-tag{
-  position:absolute;z-index:3;right:-6px;top:46%;padding:10px 14px;border-radius:14px;font-size:12px;font-weight:700;
-  display:flex;align-items:center;gap:9px;animation:bob 5s ease-in-out infinite;
-}
-.float-tag svg{width:16px;height:16px;color:var(--mint)}
-@keyframes bob{50%{transform:translateY(-8px)}}
-
-/* ---------- STRIP ---------- */
-.strip{border-block:1px solid var(--line);background:rgba(255,255,255,.5);overflow:hidden;padding:16px 0}
-.strip-track{display:flex;gap:44px;width:max-content;animation:slide 36s linear infinite;font-family:var(--f-mono);font-size:13px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
-.strip-track span{display:flex;align-items:center;gap:44px;white-space:nowrap}
-.strip-track span::after{content:"◆";color:var(--blue);font-size:9px}
-@keyframes slide{to{transform:translateX(-50%)}}
-
-section{position:relative}
-.pad{padding:120px 0}
-
-/* ---------- ABOUT ---------- */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
-.about-copy p{font-size:18px;color:#3a4260;margin-bottom:18px}
-.about-copy p strong{color:var(--ink)}
-.facts{display:grid;gap:14px}
-.fact{padding:22px 24px;display:flex;gap:18px;align-items:center;border-radius:20px}
-.fact .ic{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(63,92,242,.14),rgba(122,92,255,.14));color:var(--blue)}
-.fact .ic svg{width:22px;height:22px}
-.fact small{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
-.fact b{font-family:var(--f-display);font-size:17px;font-weight:600;letter-spacing:-.01em}
-
-/* ---------- CAPABILITIES ---------- */
-.cap{background:var(--bg-2)}
-.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
-.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-.card{
-  background:rgba(255,255,255,.75);border:1px solid #fff;border-radius:var(--radius);padding:34px;
-  box-shadow:0 10px 36px rgba(40,50,110,.07);transition:transform .35s cubic-bezier(.2,.9,.3,1),box-shadow .35s;
-  display:flex;flex-direction:column;justify-content:space-between;gap:26px;
-}
-.card:hover{transform:translateY(-6px);box-shadow:0 24px 54px rgba(40,50,110,.14)}
-.s7{grid-column:span 7}.s5{grid-column:span 5}
-.card .num{font-family:var(--f-mono);font-size:12px;color:var(--blue);margin-bottom:16px;display:block}
-.card h3{font-size:25px;font-weight:700;margin-bottom:10px}
-.card p{color:var(--muted);font-size:15px;max-width:46ch}
-.tags{display:flex;flex-wrap:wrap;gap:8px}
-.tag{font-family:var(--f-mono);font-size:11.5px;padding:6px 11px;border-radius:8px;background:var(--bg);border:1px solid var(--line)}
-.card.accent{background:linear-gradient(140deg,var(--blue),var(--violet));color:#fff;border-color:transparent}
-.card.accent .num{color:#cfd6ff}.card.accent p{color:#e3e7ff}
-.card.accent .tag{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.25);color:#fff}
-
-/* ---------- LIFECYCLE (dark) ---------- */
-.life{background:var(--ink);color:var(--on-dark);border-radius:36px;margin:0 14px;overflow:hidden}
-.life .eyebrow{color:var(--amber)}
-.life .sub{color:var(--on-dark-muted)}
-.life-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;margin-top:56px;align-items:stretch}
-.steps{display:flex;flex-direction:column;gap:12px}
-.step{
-  text-align:left;padding:22px 24px;border-radius:18px;border:1px solid rgba(255,255,255,.08);
-  background:rgba(255,255,255,.03);transition:.25s;display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;
-}
-.step:hover{background:rgba(255,255,255,.06)}
-.step .n{font-family:var(--f-mono);font-size:13px;color:var(--on-dark-muted);padding-top:3px}
-.step b{display:block;font-family:var(--f-display);font-size:19px;font-weight:600;letter-spacing:-.01em;margin-bottom:3px}
-.step span{font-size:14px;color:var(--on-dark-muted)}
-.step.on{background:linear-gradient(135deg,rgba(63,92,242,.28),rgba(122,92,255,.2));border-color:rgba(122,150,255,.5)}
-.step.on .n{color:var(--amber)}
-.panel{background:#0a0f1e;border:1px solid rgba(255,255,255,.08);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
-.panel .c-body{flex:1;min-height:300px;font-size:13.5px;padding:24px}
-.panel-foot{padding:16px 22px;border-top:1px solid rgba(255,255,255,.07);font-size:14px;color:var(--on-dark-muted);display:flex;gap:10px;align-items:flex-start}
-.panel-foot svg{flex:none;width:18px;height:18px;color:var(--mint);margin-top:2px}
-.note{font-family:var(--f-mono);font-size:11px;color:var(--on-dark-muted);margin-top:18px;opacity:.8}
-
-/* ---------- EXPERIENCE ---------- */
-.tl{display:grid;grid-template-columns:.34fr .66fr;gap:30px;margin-top:10px}
-.tl-side{position:sticky;top:110px;align-self:start}
-.tl-side p{margin-top:16px}
-.jobs{display:flex;flex-direction:column;gap:18px}
-.job{padding:36px;border-radius:var(--radius)}
-.job-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:6px}
-.job h3{font-size:26px;font-weight:700}
-.when{font-family:var(--f-mono);font-size:12px;padding:6px 12px;border-radius:99px;background:rgba(63,92,242,.1);color:var(--blue);height:max-content;font-weight:500}
-.org{color:var(--muted);font-weight:600;margin-bottom:22px}
-.job ul{list-style:none;display:grid;gap:16px}
-.job li{display:grid;grid-template-columns:26px 1fr;gap:12px;font-size:15.5px;color:#3a4260}
-.job li::before{content:"→";font-family:var(--f-mono);color:var(--blue);font-weight:700}
-.job li strong{color:var(--ink)}
-.job.mini{padding:26px 36px;background:rgba(255,255,255,.5)}
-.job.mini h3{font-size:20px}
-
-/* ---------- EDU ---------- */
-.edu{background:var(--bg-2)}
-.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
-.edu-card{min-height:260px;position:relative;overflow:hidden}
-.edu-card .yr{position:absolute;right:22px;top:6px;font-family:var(--f-display);font-weight:800;font-size:76px;color:rgba(63,92,242,.07);letter-spacing:-.05em}
-.edu-card small{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--blue);text-transform:uppercase}
-.edu-card h3{font-size:23px;font-weight:700;margin:12px 0 8px}
-.edu-card p{font-size:14px}
-.edu-card.cert{background:var(--ink);color:#fff;border-color:transparent}
-.edu-card.cert small{color:var(--amber)}.edu-card.cert p{color:var(--on-dark-muted)}.edu-card.cert .yr{color:rgba(255,255,255,.06)}
-
-/* ---------- CONTACT ---------- */
-.contact{padding:130px 0 50px}
-.contact h2{font-size:clamp(44px,7vw,104px);font-weight:800;letter-spacing:-.045em;line-height:.98;margin-bottom:44px}
-.mail{
-  display:inline-flex;align-items:center;gap:16px;font-family:var(--f-display);font-weight:600;
-  font-size:clamp(20px,3vw,40px);letter-spacing:-.02em;padding-bottom:10px;border-bottom:2px solid var(--line);transition:.25s;word-break:break-all;
-}
-.mail:hover{color:var(--blue);border-color:var(--blue)}
-.mail svg{width:28px;height:28px;flex:none}
-.reach{display:flex;flex-wrap:wrap;gap:14px;margin:44px 0 90px}
-.foot{border-top:1px solid var(--line);padding-top:28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted)}
-
-/* ---------- reveal ---------- */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
-.rv.in{opacity:1;transform:none}
-
-@media (max-width:1020px){
-  .hero-grid,.about-grid,.life-grid,.tl{grid-template-columns:1fr}
-  .tl-side{position:static}
-  .s7,.s5{grid-column:span 12}
-  .edu-grid{grid-template-columns:1fr}
-  .stack{min-height:460px;max-width:560px}
-}
-@media (max-width:820px){
-  .links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;padding:12px;border-radius:18px;background:rgba(255,255,255,.96);border:1px solid var(--glass-line);box-shadow:0 24px 50px rgba(40,50,110,.2)}
-  .nav.open .links{display:flex}
-  .nav-in{position:relative}
-  .burger{display:grid}
-  .nav-cta{display:none}
-  .wrap{width:calc(100% - 36px)}
-  .pad{padding:80px 0}
-  .hero{padding-top:120px}
-  .life{margin:0 8px;border-radius:26px}
-  .job,.card{padding:26px}
-  .console{left:4%}
-  .ticket{right:2%}
-  .float-tag{display:none}
-}
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important}
-  .rv{opacity:1;transform:none}
-  .bar i{width:72%}
-}
-</style>
-</head>
-<body>
-
-<header class="nav" id="nav">
-  <div class="nav-in">
-    <a href="#top" class="brand" aria-label="Christo Saju — home">
-      <div class="mark">CS</div>
-      <div><b>Christo Saju</b><small>IT SUPPORT ENGINEER</small></div>
-    </a>
-    <ul class="links" id="links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#lifecycle">Workflow</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-    </ul>
-    <a href="#contact" class="btn btn-dark nav-cta">Get in touch
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
-    </a>
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
-  </div>
-</header>
-
-<main id="top">
-
-<!-- HERO -->
-<section class="hero">
-  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-  <div class="wrap hero-grid">
-    <div>
-      <div class="status"><span class="dot"></span>Open to IT support &amp; database roles</div>
-      <h1>Fixing the issue <span class="grad">and the data</span> behind it.</h1>
-      <p class="lead">
-        I'm <strong>Christo Saju</strong>, an IT Support Engineer who manages incidents end to end within strict SLA timelines — from the first phone call to the <strong>SQL query</strong> that resolves it in production.
-      </p>
-      <div class="cta">
-        <a href="#lifecycle" class="btn btn-dark">See how I work
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="./resource/christonewsaju.pdf"" download class="btn btn-glass">Download resume
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-        </a>
-      </div>
-      <div class="chips">
-        <span class="chip">SQL &amp; PL/SQL</span>
-        <span class="chip">Active Directory</span>
-        <span class="chip">Remote support</span>
-        <span class="chip">SLA &amp; tickets</span>
-      </div>
-    </div>
-
-    <div class="stack" aria-hidden="true">
-      <div class="glass ticket">
-        <div class="t-head"><span class="t-id">PROFILE</span><span class="badge mint">OPEN TO WORK</span></div>
-        <div class="p-id">
-          <div class="mark">CS</div>
-          <div><h4>Christo Saju</h4><p>IT Support Engineer · Asirvad Microfinance Limited</p></div>
-        </div>
-        <div class="p-stats">
-          <div><b>2023</b><span>Working since</span></div>
-          <div><b>PL/SQL</b><span>Certified</span></div>
-          <div><b>B.E.</b><span>Engineering, 2021</span></div>
-        </div>
-      </div>
-      <div class="glass float-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Ready to join your team</div>
-      <div class="console">
-        <div class="c-bar"><i></i><i></i><i></i><span>christo_saju.sql</span></div>
-        <div class="c-body" id="typed"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="strip" aria-hidden="true">
-  <div class="strip-track" id="strip"></div>
-</div>
-
-<!-- ABOUT -->
-<section class="pad" id="about">
-  <div class="wrap about-grid">
-    <div class="rv">
-      <div class="eyebrow"><i></i>About</div>
-      <h2 class="title">Front-line support with back-end depth.</h2>
-    </div>
-    <div class="rv">
-      <div class="about-copy">
-        <p>I'm a <strong>highly analytical IT Support Engineer</strong> with a proven record of managing end-to-end incident lifecycles within strict SLA timelines.</p>
-        <p>I bridge the gap between <strong>front-end user support</strong> and <strong>back-end database operations</strong>, using SQL for data retrieval, updates and maintenance — so problems get solved at the source, not just worked around.</p>
-      </div>
-      <div class="facts" style="margin-top:34px">
-        <div class="glass fact">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
-          <div><small>Currently</small><b>IT Support Engineer · Asirvad Microfinance Limited</b></div>
-        </div>
-        <div class="glass fact">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.7-4 3-9 3s-9-1.3-9-3M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/></svg></div>
-          <div><small>Certified</small><b>PL/SQL — queries, joins, functions</b></div>
-        </div>
-        <div class="glass fact">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5"/></svg></div>
-          <div><small>Education</small><b>B.E. (2021) · Diploma in Computer Science (2017)</b></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="pad cap" id="skills">
-  <div class="wrap">
-    <div class="head-row rv">
-      <div>
-        <div class="eyebrow"><i></i>Skills</div>
-        <h2 class="title">What I bring to a support team.</h2>
-      </div>
-      <p class="sub">Hands-on user assistance, backed by database and systems knowledge.</p>
-    </div>
-    <div class="bento">
-      <div class="card s7 rv">
-        <div>
-          <span class="num">01 — SUPPORT OPERATIONS</span>
-          <h3>Incident management &amp; SLA compliance</h3>
-          <p>Owning tickets from first contact to closure, prioritising correctly and resolving within the agreed service levels.</p>
-        </div>
-        <div class="tags"><span class="tag">Ticket resolution</span><span class="tag">SLA compliance</span><span class="tag">Incident lifecycle</span><span class="tag">Troubleshooting</span></div>
-      </div>
-      <div class="card accent s5 rv">
-        <div>
-          <span class="num">02 — DATABASE</span>
-          <h3>SQL &amp; PL/SQL data maintenance</h3>
-          <p>Retrieving, updating and purging production data safely to fix back-end faults while keeping the database intact.</p>
-        </div>
-        <div class="tags"><span class="tag">PL/SQL</span><span class="tag">Joins</span><span class="tag">Functions</span><span class="tag">Data integrity</span></div>
-      </div>
-      <div class="card s5 rv">
-        <div>
-          <span class="num">03 — USER ASSISTANCE</span>
-          <h3>Phone &amp; remote desktop support</h3>
-          <p>Step-by-step guidance in plain language, so non-technical users can follow along and get back to work.</p>
-        </div>
-        <div class="tags"><span class="tag">Remote support tools</span><span class="tag">Phone support</span><span class="tag">Clear communication</span></div>
-      </div>
-      <div class="card s7 rv">
-        <div>
-          <span class="num">04 — SYSTEMS</span>
-          <h3>Active Directory, software &amp; infrastructure</h3>
-          <p>Managing accounts and access, installing and supporting software, watching system health and handling email support.</p>
-        </div>
-        <div class="tags"><span class="tag">Active Directory</span><span class="tag">System monitoring</span><span class="tag">Software installation</span><span class="tag">Email support</span><span class="tag">Hardware management</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LIFECYCLE -->
-<section class="pad life" id="lifecycle" style="margin-top:60px">
-  <div class="wrap">
-    <div class="rv">
-      <div class="eyebrow"><i></i>Workflow</div>
-      <h2 class="title" style="max-width:20ch">From a phone call to a verified fix.</h2>
-      <p class="sub" style="margin-top:16px">Pick a stage to see how I handle it. Snippets are illustrative examples, not client data.</p>
-    </div>
-    <div class="life-grid rv">
-      <div class="steps" id="steps" role="tablist">
-        <button class="step on" role="tab" data-i="0"><span class="n">01</span><div><b>Triage &amp; log</b><span>Understand the problem, set priority, record the ticket.</span></div></button>
-        <button class="step" role="tab" data-i="1"><span class="n">02</span><div><b>Investigate</b><span>Trace it across the application, the machine and the data.</span></div></button>
-        <button class="step" role="tab" data-i="2"><span class="n">03</span><div><b>Resolve safely</b><span>Preview, apply a targeted fix, verify, then commit.</span></div></button>
-        <button class="step" role="tab" data-i="3"><span class="n">04</span><div><b>Communicate &amp; close</b><span>Explain it simply, confirm with the user, document it.</span></div></button>
-      </div>
-      <div class="panel">
-        <div class="c-bar"><i></i><i></i><i></i><span id="ptitle">01_triage.log</span></div>
-        <div class="c-body" id="pcode"></div>
-        <div class="panel-foot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-          <span id="pnote"></span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="pad" id="experience">
-  <div class="wrap tl">
-    <div class="tl-side rv">
-      <div class="eyebrow"><i></i>Experience</div>
-      <h2 class="title">Where I've worked.</h2>
-      <p class="sub">Support work that touches users, systems and data.</p>
-    </div>
-    <div class="jobs">
-      <article class="glass job rv">
-        <div class="job-top"><h3>IT Support Engineer</h3><span class="when">2023 — Present</span></div>
-        <div class="org">Asirvad Microfinance Limited</div>
-        <ul>
-          <li><div><strong>Guided troubleshooting.</strong> Translated complex database and technical concepts into clear, user-friendly explanations while walking users through each step over phone and remote support.</div></li>
-          <li><div><strong>Safe production data fixes.</strong> Used advanced SQL queries to retrieve, update and purge production data, resolving complex back-end software issues while maintaining database integrity.</div></li>
-          <li><div><strong>Phone &amp; remote desktop support.</strong> Diagnosed technical issues efficiently and turned complex information into practical, easy-to-follow solutions for end users.</div></li>
-        </ul>
-      </article>
-      <article class="glass job mini rv">
-        <div class="job-top"><h3>Intern</h3><span class="when">2021</span></div>
-        <div class="org" style="margin-bottom:0">Certified in PL/SQL — SQL fundamentals, queries, joins, functions and database concepts.</div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section class="pad edu" id="education">
-  <div class="wrap">
-    <div class="rv">
-      <div class="eyebrow"><i></i>Education &amp; certification</div>
-      <h2 class="title" style="max-width:20ch">The academic foundation.</h2>
-    </div>
-    <div class="edu-grid">
-      <div class="card edu-card rv"><span class="yr">2021</span>
-        <div><small>Degree</small><h3>Bachelor in Engineering</h3><p>Easa College of Engineering and Technology</p></div>
-      </div>
-      <div class="card edu-card rv"><span class="yr">2017</span>
-        <div><small>Diploma</small><h3>Diploma in Computer Science</h3><p>St. Mary's Institute of Technology</p></div>
-      </div>
-      <div class="card edu-card cert rv"><span class="yr">SQL</span>
-        <div><small>Certification</small><h3>Certified in PL/SQL</h3><p>SQL fundamentals, queries, joins, functions and relational database concepts.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="eyebrow"><i></i>Contact</div>
-    <h2 class="rv">Have a support role <span class="grad">to fill?</span></h2>
-    <a href="mailto:christosaju0808@gmail.com" class="mail rv">
-      <span>christosaju0808@gmail.com</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
-    </a>
-    <div class="reach rv">
-      <a href="tel:+918592097320" class="btn btn-dark">+91 85920 97320</a>
-      <a href="https://www.linkedin.com/in/christo-saju-698677206/" target="_blank" rel="noopener" class="btn btn-glass">LinkedIn</a>
-      <a href="./resource/christonewsaju.pdf"" download class="btn btn-blue">Download resume</a>
-    </div>
-    <footer class="foot">
-      <span>© <span id="year">2026</span> Christo Saju</span>
-      <span>IT Support Engineer</span>
-    </footer>
-  </div>
-</section>
-
-</main>
-
-<script>
-(function(){
-  /* year + nav */
-  document.getElementById('year').textContent = new Date().getFullYear();
-  var nav = document.getElementById('nav'), burger = document.getElementById('burger');
-  window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', scrollY > 10); }, {passive:true});
-  burger.addEventListener('click', function(){
-    var o = nav.classList.toggle('open'); burger.setAttribute('aria-expanded', o);
-  });
-  document.querySelectorAll('#links a').forEach(function(a){ a.addEventListener('click', function(){ nav.classList.remove('open'); burger.setAttribute('aria-expanded', false); }); });
-
-  /* scroll reveal */
-  var io = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:.12});
-  document.querySelectorAll('.rv').forEach(function(el, i){ el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
-
-  /* active nav link */
-  var secs = ['about','skills','lifecycle','experience','education'].map(function(id){ return document.getElementById(id); });
-  var navIO = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){
-      document.querySelectorAll('#links a').forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id); });
-    }});
-  }, {rootMargin:'-45% 0px -50% 0px'});
-  secs.forEach(function(s){ if(s) navIO.observe(s); });
-
-  /* skills strip */
-  var items = ['Incident management','SQL & PL/SQL','Remote desktop support','SLA compliance','Active Directory','System monitoring','Software support','Email support','Hardware management'];
-  var html = '';
-  for (var r = 0; r < 2; r++) html += '<span>' + items.join('</span><span>') + '</span>';
-  document.getElementById('strip').innerHTML = html;
-
-  /* tiny SQL highlighter */
-  function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-  function hl(src){
-    return esc(src).split('\n').map(function(line){
-      if (/^\s*--/.test(line)) return '<span class="c">' + line + '</span>';
-      return line
-        .replace(/('[^']*')/g,'<span class="s">$1</span>')
-        .replace(/\b(SELECT|FROM|WHERE|JOIN|ON|UPDATE|SET|COMMIT|ROLLBACK|COUNT|AND|GROUP BY|ORDER BY|INNER|LEFT)\b/g,'<span class="k">$1</span>')
-        .replace(/\b(\d+)\b/g,'<span class="n">$1</span>')
-        .replace(/\b(christo_saju)\b/g,'<span class="f">$1</span>');
-    }).join('\n');
-  }
-
-  /* hero typed console */
-  var seq = [
-    { q:"SELECT role, company\nFROM christo_saju;", r:"IT Support Engineer\nAsirvad Microfinance Limited" },
-    { q:"SELECT skills\nFROM christo_saju;", r:"SQL & PL/SQL · Active Directory\nRemote Support · SLA & Tickets" },
-    { q:"SELECT status\nFROM christo_saju;", r:"Open to new opportunities" }
-  ];
-  function frame(q, r, caret){
-    return hl(q) + (r ? '\n\n<span class="res">→ ' + esc(r).replace(/\n/g, '\n  ') + '</span>' : '') + (caret ? '<span class="caret"></span>' : '');
-  }
-  var typed = document.getElementById('typed');
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce){ typed.innerHTML = frame(seq[0].q, seq[0].r, false); }
-  else {
-    var si = 0, ci = 0;
-    (function tick(){
-      var s = seq[si];
-      if (ci <= s.q.length){
-        typed.innerHTML = frame(s.q.slice(0, ci), '', true);
-        ci++; setTimeout(tick, 45 + Math.random()*45);
-      } else {
-        typed.innerHTML = frame(s.q, s.r, false);
-        setTimeout(function(){ si = (si + 1) % seq.length; ci = 0; tick(); }, 3000);
+    <!-- Structured data: person portfolio -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Christo Saju",
+        "url": "https://christosaju.pages.dev/",
+        "jobTitle": "IT Support Engineer",
+        "description": "IT Support Engineer experienced in incident management, SQL and PL/SQL, SLA compliance and remote support.",
+        "email": "mailto:christosaju0808@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/christo-saju-698677206/"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Asirvad Microfinance Limited"
+        },
+        "knowsAbout": [
+          "IT Support",
+          "SQL",
+          "PL/SQL",
+          "Incident Management",
+          "SLA Compliance",
+          "Remote Desktop Support",
+          "Active Directory",
+          "Database Operations"
+        ],
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Easa College of Engineering and Technology"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "St. Mary's Institute of Technology"
+          }
+        ]
       }
-    })();
-  }
+    </script>
+  </head>
+  <body>
+    <header class="nav" id="nav">
+      <div class="nav-in">
+        <a href="#top" class="brand" aria-label="Christo Saju — home">
+          <div class="mark">CS</div>
+          <div><b>Christo Saju</b><small>IT SUPPORT ENGINEER</small></div>
+        </a>
+        <ul class="links" id="links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#lifecycle">Workflow</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-dark nav-cta">Get in touch
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </a>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+      </div>
+    </header>
+    <main id="top">
 
-  /* lifecycle tabs */
-  var stages = [
-    { t:'01_triage.log', n:'Gather full context, judge severity and log it so nothing is lost.',
-      c:"-- incident intake\nchannel   : phone + remote session\nsymptom   : user cannot complete a task\nimpact    : single user / team / branch\npriority  : set against SLA target\nnext      : reproduce and check logs" },
-    { t:'02_investigate.sql', n:'Check the application, the workstation, then the data behind it.',
-      c:"-- find records that do not match\nSELECT t.id, t.status, u.user_name\nFROM transactions t\nJOIN users u ON u.id = t.user_id\nWHERE t.status = 'PENDING'\nORDER BY t.created_at;" },
-    { t:'03_resolve.sql', n:'Preview first, change only what is needed, verify, then commit.',
-      c:"-- preview the rows affected\nSELECT COUNT(*) FROM job_queue\nWHERE status = 'STUCK';\n\n-- targeted update\nUPDATE job_queue SET status = 'RETRY'\nWHERE status = 'STUCK';\n\n-- verify, then make it permanent\nCOMMIT;" },
-    { t:'04_close.txt', n:'Explain the fix in plain words, confirm the user is happy, record it.',
-      c:"-- message to the user\n\"The issue was caused by a record stuck\n in the system. I've corrected it and\n checked that everything now works.\n Please try again and tell me if it\n behaves as expected.\"\n\n-- ticket\nstatus: resolved within SLA\nnotes : root cause + fix documented" }
-  ];
-  var steps = document.querySelectorAll('.step');
-  var pcode = document.getElementById('pcode'), ptitle = document.getElementById('ptitle'), pnote = document.getElementById('pnote');
-  function show(i){
-    steps.forEach(function(s, j){ s.classList.toggle('on', i === j); s.setAttribute('aria-selected', i === j); });
-    ptitle.textContent = stages[i].t; pnote.textContent = stages[i].n; pcode.innerHTML = hl(stages[i].c);
-  }
-  steps.forEach(function(s){ s.addEventListener('click', function(){ show(+s.dataset.i); }); });
-  show(0);
-})();
-</script>
-</body>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+        <div class="wrap hero-grid">
+          <div>
+            <div class="status"><span class="dot"></span>Open to IT support &amp; database roles</div>
+            <h1>Fixing the issue <span class="grad">and the data</span> behind it.</h1>
+            <p class="lead">
+              I'm <strong>Christo Saju</strong>, an IT Support Engineer who manages incidents end to end within strict SLA timelines — from the first phone call to the <strong>SQL query</strong> that resolves it in production.
+            </p>
+            <div class="cta">
+              <a href="#lifecycle" class="btn btn-dark">See how I work
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a href="./resource/christonewsaju.pdf" download class="btn btn-glass">Download resume
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              </a>
+            </div>
+            <div class="chips">
+              <span class="chip">SQL &amp; PL/SQL</span>
+              <span class="chip">Active Directory</span>
+              <span class="chip">Remote support</span>
+              <span class="chip">SLA &amp; tickets</span>
+            </div>
+          </div>
+          <div class="stack" aria-hidden="true">
+            <div class="glass ticket">
+              <div class="t-head"><span class="t-id">PROFILE</span><span class="badge mint">OPEN TO WORK</span></div>
+              <div class="p-id">
+                <div class="mark">CS</div>
+                <div><h4>Christo Saju</h4><p>IT Support Engineer · Asirvad Microfinance Limited</p></div>
+              </div>
+              <div class="p-stats">
+                <div><b>2023</b><span>Working since</span></div>
+                <div><b>PL/SQL</b><span>Certified</span></div>
+                <div><b>B.E.</b><span>Engineering, 2021</span></div>
+              </div>
+            </div>
+            <div class="glass float-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Ready to join your team</div>
+            <div class="console">
+              <div class="c-bar"><i></i><i></i><i></i><span>christo_saju.sql</span></div>
+              <div class="c-body" id="typed"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="strip" aria-hidden="true">
+        <div class="strip-track" id="strip"></div>
+      </div>
+
+      <!-- ABOUT -->
+      <section class="pad" id="about">
+        <div class="wrap about-grid">
+          <div class="rv">
+            <div class="eyebrow"><i></i>About</div>
+            <h2 class="title">Front-line support with back-end depth.</h2>
+          </div>
+          <div class="rv">
+            <div class="about-copy">
+              <p>I'm a <strong>highly analytical IT Support Engineer</strong> with a proven record of managing end-to-end incident lifecycles within strict SLA timelines.</p>
+              <p>I bridge the gap between <strong>front-end user support</strong> and <strong>back-end database operations</strong>, using SQL for data retrieval, updates and maintenance — so problems get solved at the source, not just worked around.</p>
+            </div>
+            <div class="facts" style="margin-top:34px">
+              <div class="glass fact">
+                <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+                <div><small>Currently</small><b>IT Support Engineer · Asirvad Microfinance Limited</b></div>
+              </div>
+              <div class="glass fact">
+                <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.7-4 3-9 3s-9-1.3-9-3M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/></svg></div>
+                <div><small>Certified</small><b>PL/SQL — queries, joins, functions</b></div>
+              </div>
+              <div class="glass fact">
+                <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+                <div><small>Education</small><b>B.E. (2021) · Diploma in Computer Science (2017)</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="pad cap" id="skills">
+        <div class="wrap">
+          <div class="head-row rv">
+            <div>
+              <div class="eyebrow"><i></i>Skills</div>
+              <h2 class="title">What I bring to a support team.</h2>
+            </div>
+            <p class="sub">Hands-on user assistance, backed by database and systems knowledge.</p>
+          </div>
+          <div class="bento">
+            <div class="card s7 rv">
+              <div>
+                <span class="num">01 — SUPPORT OPERATIONS</span>
+                <h3>Incident management &amp; SLA compliance</h3>
+                <p>Owning tickets from first contact to closure, prioritising correctly and resolving within the agreed service levels.</p>
+              </div>
+              <div class="tags"><span class="tag">Ticket resolution</span><span class="tag">SLA compliance</span><span class="tag">Incident lifecycle</span><span class="tag">Troubleshooting</span></div>
+            </div>
+            <div class="card accent s5 rv">
+              <div>
+                <span class="num">02 — DATABASE</span>
+                <h3>SQL &amp; PL/SQL data maintenance</h3>
+                <p>Retrieving, updating and purging production data safely to fix back-end faults while keeping the database intact.</p>
+              </div>
+              <div class="tags"><span class="tag">PL/SQL</span><span class="tag">Joins</span><span class="tag">Functions</span><span class="tag">Data integrity</span></div>
+            </div>
+            <div class="card s5 rv">
+              <div>
+                <span class="num">03 — USER ASSISTANCE</span>
+                <h3>Phone &amp; remote desktop support</h3>
+                <p>Step-by-step guidance in plain language, so non-technical users can follow along and get back to work.</p>
+              </div>
+              <div class="tags"><span class="tag">Remote support tools</span><span class="tag">Phone support</span><span class="tag">Clear communication</span></div>
+            </div>
+            <div class="card s7 rv">
+              <div>
+                <span class="num">04 — SYSTEMS</span>
+                <h3>Active Directory, software &amp; infrastructure</h3>
+                <p>Managing accounts and access, installing and supporting software, watching system health and handling email support.</p>
+              </div>
+              <div class="tags"><span class="tag">Active Directory</span><span class="tag">System monitoring</span><span class="tag">Software installation</span><span class="tag">Email support</span><span class="tag">Hardware management</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIFECYCLE -->
+      <section class="pad life" id="lifecycle" style="margin-top:60px">
+        <div class="wrap">
+          <div class="rv">
+            <div class="eyebrow"><i></i>Workflow</div>
+            <h2 class="title" style="max-width:20ch">From a phone call to a verified fix.</h2>
+            <p class="sub" style="margin-top:16px">Pick a stage to see how I handle it. Snippets are illustrative examples, not client data.</p>
+          </div>
+          <div class="life-grid rv">
+            <div class="steps" id="steps" role="tablist">
+              <button class="step on" role="tab" data-i="0"><span class="n">01</span><div><b>Triage &amp; log</b><span>Understand the problem, set priority, record the ticket.</span></div></button>
+              <button class="step" role="tab" data-i="1"><span class="n">02</span><div><b>Investigate</b><span>Trace it across the application, the machine and the data.</span></div></button>
+              <button class="step" role="tab" data-i="2"><span class="n">03</span><div><b>Resolve safely</b><span>Preview, apply a targeted fix, verify, then commit.</span></div></button>
+              <button class="step" role="tab" data-i="3"><span class="n">04</span><div><b>Communicate &amp; close</b><span>Explain it simply, confirm with the user, document it.</span></div></button>
+            </div>
+            <div class="panel">
+              <div class="c-bar"><i></i><i></i><i></i><span id="ptitle">01_triage.log</span></div>
+              <div class="c-body" id="pcode"></div>
+              <div class="panel-foot">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                <span id="pnote"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="pad" id="experience">
+        <div class="wrap tl">
+          <div class="tl-side rv">
+            <div class="eyebrow"><i></i>Experience</div>
+            <h2 class="title">Where I've worked.</h2>
+            <p class="sub">Support work that touches users, systems and data.</p>
+          </div>
+          <div class="jobs">
+            <article class="glass job rv">
+              <div class="job-top"><h3>IT Support Engineer</h3><span class="when">2023 — Present</span></div>
+              <div class="org">Asirvad Microfinance Limited</div>
+              <ul>
+                <li><div><strong>Guided troubleshooting.</strong> Translated complex database and technical concepts into clear, user-friendly explanations while walking users through each step over phone and remote support.</div></li>
+                <li><div><strong>Safe production data fixes.</strong> Used advanced SQL queries to retrieve, update and purge production data, resolving complex back-end software issues while maintaining database integrity.</div></li>
+                <li><div><strong>Phone &amp; remote desktop support.</strong> Diagnosed technical issues efficiently and turned complex information into practical, easy-to-follow solutions for end users.</div></li>
+              </ul>
+            </article>
+            <article class="glass job mini rv">
+              <div class="job-top"><h3>Intern</h3><span class="when">2021</span></div>
+              <div class="org" style="margin-bottom:0">Certified in PL/SQL — SQL fundamentals, queries, joins, functions and database concepts.</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="pad edu" id="education">
+        <div class="wrap">
+          <div class="rv">
+            <div class="eyebrow"><i></i>Education &amp; certification</div>
+            <h2 class="title" style="max-width:20ch">The academic foundation.</h2>
+          </div>
+          <div class="edu-grid">
+            <div class="card edu-card rv"><span class="yr">2021</span>
+              <div><small>Degree</small><h3>Bachelor in Engineering</h3><p>Easa College of Engineering and Technology</p></div>
+            </div>
+            <div class="card edu-card rv"><span class="yr">2017</span>
+              <div><small>Diploma</small><h3>Diploma in Computer Science</h3><p>St. Mary's Institute of Technology</p></div>
+            </div>
+            <div class="card edu-card cert rv"><span class="yr">SQL</span>
+              <div><small>Certification</small><h3>Certified in PL/SQL</h3><p>SQL fundamentals, queries, joins, functions and relational database concepts.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="wrap">
+          <div class="eyebrow"><i></i>Contact</div>
+          <h2 class="rv">Have a support role <span class="grad">to fill?</span></h2>
+          <a href="mailto:christosaju0808@gmail.com" class="mail rv">
+            <span>christosaju0808@gmail.com</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+          </a>
+          <div class="reach rv">
+            <a href="tel:+918592097320" class="btn btn-dark">+91 85920 97320</a>
+            <a href="https://www.linkedin.com/in/christo-saju-698677206/" target="_blank" rel="noopener" class="btn btn-glass">LinkedIn</a>
+            <a href="./resource/christonewsaju.pdf" download class="btn btn-blue">Download resume</a>
+          </div>
+          <footer class="foot">
+            <span>© <span id="year">2026</span> Christo Saju</span>
+            <span>IT Support Engineer</span>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <script src="./js/main.js" defer></script>
+  </body>
 </html>
